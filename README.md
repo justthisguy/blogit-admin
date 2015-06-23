@@ -1,5 +1,8 @@
 [![Gem Version](https://badge.fury.io/rb/blogit-admin.png)](http://badge.fury.io/rb/blogit-admin)
-[![Code Climate](https://codeclimate.com/github/KatanaCode/blogit-admin.png)](http://codeclimate.com/github/KatanaCode/blogit-admin/)
+[![Code Climate](https://codeclimate.com/github/KatanaCode/blogit-admin/badges/gpa.svg)](https://codeclimate.com/github/KatanaCode/blogit-admin)
+
+[![Test Coverage](https://codeclimate.com/github/KatanaCode/blogit-admin/badges/coverage.svg)](https://codeclimate.com/github/KatanaCode/blogit-admin/coverage)
+
 [![Blogit-admin](https://gemnasium.com/KatanaCode/blogit-admin.png)](https://gemnasium.com/KatanaCode/blogit-admin)
 [![Travis CI](https://travis-ci.org/KatanaCode/blogit-admin.png)](https://travis-ci.org/KatanaCode/blogit-admin.png)
 
