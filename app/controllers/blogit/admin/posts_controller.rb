@@ -3,7 +3,7 @@ module Blogit
 
     class PostsController < ::Blogit::Admin::ApplicationController
 
-      if Rails.version < 4
+      if Rails::VERSION::MAJOR < 4
         before_filter :authenticate_blogger
       else
         before_action :authenticate_blogger
@@ -11,9 +11,9 @@ module Blogit
 
       # If a layout is specified, use that. Otherwise, fall back to the default
       layout Blogit.configuration.layout if Blogit.configuration.layout
-      
+
       helper Blogit::PostsHelper
-      
+
       attr_accessor :post
 
       def index
@@ -24,7 +24,7 @@ module Blogit
       def show
         Blogit::configuration.include_comments = :disqus
         set_post_from_id(false)
-        set_latest_comments        
+        set_latest_comments
       end
 
       def new
@@ -34,13 +34,13 @@ module Blogit
       def create
         set_new_blogger_post_from_params
         if post.save
-          redirect_to post, 
+          redirect_to post,
             notice: t(:blog_post_was_successfully_created, scope: 'blogit.admin.posts')
         else
           render action: "new"
         end
       end
-      
+
       def edit
         set_post_from_id(false)
       end
@@ -48,7 +48,7 @@ module Blogit
       def update
         set_post_from_id(false)
         if post.update_attributes(post_paramters)
-          redirect_to post, 
+          redirect_to post,
             notice: t(:blog_post_was_successfully_updated, scope: 'blogit.admin.posts')
         else
           render action: "edit"
@@ -58,7 +58,7 @@ module Blogit
       def destroy
         set_post_from_id(false)
         post.destroy
-        redirect_to posts_url, 
+        redirect_to posts_url,
           notice: t(:blog_post_was_successfully_destroyed, scope: 'blogit.admin.posts')
       end
 
@@ -85,15 +85,15 @@ module Blogit
       def set_posts
         @posts = Post.for_admin_index(params[Kaminari.config.param_name])
       end
-      
+
       def set_latest_comments
         @latest_comments = Comment.latest
       end
-      
+
       def set_new_blogger_post_from_params
         @post = current_blogger.blog_posts.new(post_paramters)
       end
-      
+
     end
 
   end
