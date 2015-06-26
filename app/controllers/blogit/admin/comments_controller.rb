@@ -1,8 +1,8 @@
 module Blogit
   module Admin
     class CommentsController < ::Blogit::Admin::ApplicationController
-      
-      if Rails.version < 4
+
+      if Rails::VERSION::MAJOR < 4
         before_filter :authenticate_blogger
       else
         before_action :authenticate_blogger
