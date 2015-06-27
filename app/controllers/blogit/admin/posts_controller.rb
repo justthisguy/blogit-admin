@@ -47,7 +47,7 @@ module Blogit
 
       def update
         set_post_from_id(false)
-        if post.update_attributes(post_paramters)
+        if post.update_attributes(post_params)
           redirect_to post,
             notice: t(:blog_post_was_successfully_updated, scope: 'blogit.admin.posts')
         else
@@ -62,9 +62,9 @@ module Blogit
           notice: t(:blog_post_was_successfully_destroyed, scope: 'blogit.admin.posts')
       end
 
-      def post_paramters
+      def post_params
         if params[:post]
-          params.require(:post).permit(:title, :body, :tag_list, :state)
+          params.require(:post).permit(:title, :body, :tag_list, :state, :description)
         else
           {}
         end
@@ -91,7 +91,7 @@ module Blogit
       end
 
       def set_new_blogger_post_from_params
-        @post = current_blogger.blog_posts.new(post_paramters)
+        @post = current_blogger.blog_posts.new(post_params)
       end
 
     end
