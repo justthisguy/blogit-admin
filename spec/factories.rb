@@ -1,10 +1,10 @@
 FactoryGirl.define do
-  
+
   # =================
   # = Gem Factories =
   # =================
   factory :post, class: Blogit::Post do
-    title "Tis is a blog post title"
+    title "This is a blog post title"
     body "This is the body of the blog post - you'll see it's a lot bigger than the title"
     state "draft"
     association :blogger, :factory => :user
@@ -20,7 +20,7 @@ FactoryGirl.define do
     body "I once saw a child the size of a tangerine!"
     post
   end
-  
+
   # =======================
   # = Dummy App Factories =
   # =======================
@@ -28,5 +28,5 @@ FactoryGirl.define do
     username "bodacious"
     password "password"
   end
-  
+
 end
