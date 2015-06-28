@@ -60,7 +60,7 @@ describe Blogit::PostsController do
 
       # TODO: Think of a way to test this. The PostsController is being cached
       # because cache-classes is set to true but that means the layout is not
-      # being changed. 
+      # being changed.
       #
       # This works in practice but not in testing
       # it "should use the specified layout" do
