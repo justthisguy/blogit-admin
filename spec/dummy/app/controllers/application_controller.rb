@@ -18,4 +18,6 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def authenticate_blogger() login_required  end
+
 end

@@ -5,16 +5,7 @@ module Blogit
       BLOGIT_ADMIN_ROOT = File.join(File.dirname(__FILE__), "..", "..", "..")
       
       isolate_namespace Blogit::Admin
-    
-      initializer "blogit-admin.extend_active_record" do
 
-        if defined?(::ActiveRecord::Base)
-          # ::ActiveRecord::Base.send(:include, Blogit::Blogs)
-          # ::ActiveRecord::Base.send(:include, Validators)
-        end
-      
-      end
-      
       
       if Rails.env.development?
         ActionDispatch::Callbacks.to_prepare do
