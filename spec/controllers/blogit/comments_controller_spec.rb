@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogit::CommentsController do
+describe Blogit::CommentsController, type: :controller do
   
   let(:blog_post) { Blogit::Post.first || create(:post) }
     
