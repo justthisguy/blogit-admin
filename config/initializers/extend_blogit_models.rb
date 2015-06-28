@@ -1,3 +1,5 @@
+require "blogit"
+
 Blogit::Post.class_eval do
   include Blogit::Admin::ModelExtensions::Post
 end

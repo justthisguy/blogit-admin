@@ -7,6 +7,8 @@ require "blogit/admin/model_extensions/post"
 require "blogit/admin/model_extensions/comment"
 
 require "epic-editor-rails"
+require "kaminari"
+require "acts-as-taggable-on"
 
 Blogit::Configuration.class_eval do
   

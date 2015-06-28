@@ -3,6 +3,7 @@ module Blogit
 
     class PostsController < ::Blogit::Admin::ApplicationController
 
+
       if Rails::VERSION::MAJOR < 4
         before_filter :authenticate_blogger
       else

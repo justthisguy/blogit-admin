@@ -30,7 +30,7 @@ module Blogit
           super
         else
           raise NotImplementedError, 
-            "Please define :current_blogger in your ApplicationController.\
+            "Please define :authenticate_blogger in your ApplicationController.\
               Blogit::Admin needs this to determine who's signed in."
         end
       end

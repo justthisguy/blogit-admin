@@ -37,7 +37,7 @@
 
   <%= f.field id: "new_blog_post_state_field" do %>
     <%= f.label :state, t(:state, scope: 'blogit.admin.posts') %>
-    <%= f.collection_select(:state, (Blogit::Configuration::ACTIVE_STATES + Blogit::Configuration::HIDDEN_STATES), :to_s, :to_s) %>
+    <%= f.collection_select(:state, blogit_conf.active_states + blogit_conf.hidden_states, :to_s, :to_s) %>
   <% end %>
 
   <%= actions do %>
