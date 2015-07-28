@@ -3,7 +3,7 @@
 [![Test Coverage](https://codeclimate.com/github/KatanaCode/blogit-admin/badges/coverage.svg)](https://codeclimate.com/github/KatanaCode/blogit-admin/coverage)
 [![Blogit-admin](https://gemnasium.com/KatanaCode/blogit-admin.png)](https://gemnasium.com/KatanaCode/blogit-admin)
 [![Travis CI](https://travis-ci.org/KatanaCode/blogit-admin.png)](https://travis-ci.org/KatanaCode/blogit-admin.png)
-
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Bodacious/blogit-admin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 # Blogit Admin
