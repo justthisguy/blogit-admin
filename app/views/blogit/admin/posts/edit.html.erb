@@ -1,3 +1,5 @@
-<h2><%=t :edit_blog_post, scope: 'blogit.admin.posts', id: @post.id %></h2>
+<% edit_title = "#{t :edit_blog_post, scope: 'blogit.admin.posts', id: @post.id}" %>
 
-<%= render 'form' %>
+
+
+<%= render 'form', the_title: edit_title %>

@@ -1,3 +1,4 @@
-<h2><%=t :write_a_new_blog_post, scope: 'blogit.admin.posts'%></h2>
+<% new_title = "#{t :write_a_new_blog_post, scope: 'blogit.admin.posts'}" %>
 
-<%= render 'form' %>
+
+<%= render 'form', the_title: new_title %>
