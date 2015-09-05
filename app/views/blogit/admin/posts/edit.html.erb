@@ -1,5 +1,7 @@
-<% edit_title = "#{t :edit_blog_post, scope: 'blogit.admin.posts', id: @post.id}" %>
+<div class="offset-for-navbar">
 
+  <% edit_title = "#{t :edit_blog_post, scope: 'blogit.admin.posts', id: @post.id}" %>
 
+  <%= render 'form', the_title: edit_title %>
 
-<%= render 'form', the_title: edit_title %>
+</div>
