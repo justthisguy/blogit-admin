@@ -3,6 +3,8 @@ module Blogit
 
     class PostsController < ::Blogit::Admin::ApplicationController
 
+      before_action :authenticate_editor
+
 
       if Rails::VERSION::MAJOR < 4
         before_filter :authenticate_blogger
@@ -73,6 +75,10 @@ module Blogit
 
 
       private
+
+      def authenticate_editor
+        redirect_to blogit.blog_root_path unless current_user && current_user.editor?
+      end
 
 
       def set_post_from_id(must_be_own_post)
